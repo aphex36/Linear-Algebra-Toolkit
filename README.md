@@ -4,3 +4,5 @@ This project was for the purpose of adding an interface to calculate Matrix opti
 
 It adds an interface to numeric.js's methods but I extended the methods to include other decomposition methods such as QR Decomposition, Reduced Row Echelon Form, Rank/Nullity, Determinant, and Cholesky Factorization
 
+It also makes use of MathJax to display neat LaTeX.
+
