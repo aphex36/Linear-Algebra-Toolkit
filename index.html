@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Linear Algebra Toolbox</title>
+        <meta charset="utf-8" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header style='height:53px'>
+              <h1 style='padding-left: 10px'><a>Linear Algebra Toolbox</a></h1>
+        </header>
+        <div id='rightPane'>
+          <h2 style='text-align: center' id = "labelPart" class="centerTheButton">
+            <label>Select your option</label>
+          </h2>
+          <div style='text-align: center'>
+            <div style='margin-bottom: 50px' class="dropdown">
+              <button class="dropbtn">Matrix Calculation Options</button>
+              <div class="dropdown-content">
+                <a style='cursor: pointer'>LU Decomposition</a>
+                <a style='cursor: pointer'>QR Decomposition</a>
+                <a style='cursor: pointer'>Reduced Row Echelon Form</a>
+                <a style='cursor: pointer'>Inverse</a>
+                <a style='cursor: pointer'>Eigenvalues</a>
+                <a style='cursor: pointer'>Determinant</a>
+                <a style='cursor: pointer'>Singular Value Decomposition</a>
+                <a style='cursor: pointer'>Cholesky Decomposition</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="handlebars.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="numeric.js"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script id="DimensionSubmission" type="text/x-handlebars-template">
+          <h2 id = 'optionType' class='centerTheButton'>
+            <label>{{id}}</label>
+          </h2>
+          {{#if hasNoTextArea}}
+            <h2 id = 'labelPart'  class='centerTheButton'>
+              <label>Enter in a matrix, sepearated by spaces and rows</label>
+            </h2>
+            <textarea id='matrixData' style='height:300px;width:500px'></textarea>
+            <span style='height:30px'></span>
+            <h3 style='width:90px;height:39px' class='centerBox' id='submissionForm'>
+              <button id='submitDimensions' class='btn'>Submit</button>
+            </h3>
+            <span id='modifiedMatrixPart'>
+              <div id='matrix'></div>
+            </span>
+          {{/if}}
+        </script>
+
+        <script id="IncorrectMatrix" type="text/x-handlebars-template">
+          <div id='matrix' class='error centerTheButton'> {{id}} can only be found for square matrices</div>
+        </script>
+
+        <script id="NumberErrorMatrix" type="text/x-handlebars-template">
+          <div id='matrix' class='error centerTheButton'> Matrix format is incorrect, either a non-number was entered or dimensions don't match </div>
+        </script>
+
+        <script id="GreaterThanRequired" type="text/x-handlebars-template">
+          <div id='matrix' class='error centerTheButton'> No higher than 10 on each dimension of the matrix</div>
+        </script>
+
+        <script id="Output" type="text/x-handlebars-template">
+          <div id='spaceBottom' style='height:30px'></div>
+          <div id='output' class='centerTheButton'></div>
+        </script>
+
+        <script id="NotInvertible" type="text/x-handlebars-template">
+          <span class='error centerTheButton'> Matrix is not invertible</span>
+        </script>
+
+        <script id="incompatibleWithCholesky" type="text/x-handlebars-template">
+          <span class='error centerTheButton'> Matrix is not symmetric and positive definite</span>
+        </script>
+    </body>
+</html>

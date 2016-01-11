@@ -1,0 +1,211 @@
+*:focus {
+    outline: 0px none transparent;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font: 14px/1.5 "Open Sans", "PT Sans", "Source Sans Pro",
+        "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    background-color: #ECF0F1;
+    color: #333;
+    height: 100%;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 170%;
+}
+
+h2 span, h3 {
+    color: #34495E;
+}
+
+h3 {
+    font-size: 100%;
+}
+
+h4 {
+    font-size: 75%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-top: 0px;
+}
+
+
+header {
+    position: relative;
+    height: 50px;
+    background-color: #008000;
+    padding-top: 10px;
+}
+
+header h1 a {
+    color: #fff;
+}
+
+.centerTheButton
+{
+  text-align: center;
+}
+.btn {
+    float: right;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 7px 20px 8px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border: none;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.centerForBoxes {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 100px;
+}
+
+.centerBox {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sizeMatrix
+{
+  width: 100%;
+  height: 50%;
+}
+.isize
+{
+  height: 50px;
+}
+
+.formatter
+{
+  height : 300px;
+  width : 500px;
+}
+
+.error
+{
+  color: red;
+}
+
+h6 {
+    color: #34495E;
+    font-size: 130%;
+}
+
+.list-question {
+    padding: 20px 30px;
+    margin-bottom: 0px;
+    border-bottom: 1px dotted #ddd;
+    overflow: hidden;
+}
+
+.list-question p {
+    color: #232323;
+}
+
+.question-info:hover {
+    cursor: pointer;
+}
+
+.popbox {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    width: 200px;
+    padding: 10px;
+    background: #EEEFEB;
+    color: #000000;
+    border: 1px solid #4D4F53;
+    margin: 0px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+    box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+}
+.popbox h7
+{
+    background-color: black;
+    color:  #E3E5DD;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    margin: -10px 0px 8px -10px;
+    padding: 5px 10px;
+}
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
